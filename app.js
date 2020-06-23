@@ -81,7 +81,6 @@
 // var numberType = typeof(convetToInt);
 // document.write("<br>Type: " + numberType);
 
-
 // Chapter # 21-25 and Task # 10
 
 // var word = prompt("Please type a word", "Type word here");
@@ -115,16 +114,15 @@
 
 // Chapter # 21-25 and Task # 13
 
-// var userName = prompt("Enter UserName");
-// for (var i=0; i < userName.length; i++)
+// var userName = prompt("Please enter username");
+// var charCode;
+// for (var i = 0; i < userName .length; i++) 
 // {
-//     if (userName.charAt(i) === "!" || userName.charAt(i)=== "," || userName.charAt(i)=== "." || userName.charAt(i) === "@" )
-
+//     var charCode = userName .charCodeAt(i);
+//     if ((charCode === 33) || (charCode === 44) || (charCode === 46) || (charCode === 64))
 //     {
-//         alert("Please enter a valid name");
-//         break;
+//         alert("Please enter a valid username");
 //     }
-
 // }
 
 
@@ -147,41 +145,33 @@
 // Chapter # 21-25 and Task # 15
 
 // var password = prompt("Please Enter a password");
-// for (var i=0;i<=password.length;i++)
+// var charCode;
+// for (var i = 0; i < password.length; i++) 
 // {
-
-//      if (password.charAt(0)<=9 && password.charAt(0)>=0  )
+//     var charCode = password.charCodeAt(i);
+//     if (!(charCode > 47 && charCode < 58) 
+//     && !(charCode > 64 && charCode < 91) 
+//     && !(charCode > 96 && charCode < 123))
+        
 //     {
-//         alert("Password can not begin with a number");
-//         break;
-
-//     }
-
-//     else if (password.length < 6)
-//     {
-//         alert("at least 6 characters long");
-//         break;
-//     }
-
-//     // else if (!(password >= 'A' && password <= 'Z')) 
-//     // {
-//     // alert( "Password Should contain numbers and letters");
-//     // break;
-//     // }
-
-//     // else if (!(password >= 'a' && password <= 'z')) 
-//     // {
-//     // alert( "Password Should contain numbers and letters");
-//     // break;
-//     // }
-
-//     else
-//     {
-//         alert( "Enter Valid Password, Password Should contain numbers and letters");
-//     break;
-
+//         document.write("Password should contain alphabets and numbers");
+//         document.write("<br>Please enter a valid password");
 //     }
     
+//     if (password.length < 6)
+//     {
+//         document.write("Password must be at least 6 characters long");
+//         document.write("<br>Please enter a valid password");
+//         break;
+        
+//     }
+
+//     if (password.charCodeAt(0) > 47 && password.charCodeAt(0) < 58 )
+//     {
+//         document.write("Password should not start with a number");
+//         document.write("<br>Please enter a valid password");
+//         break;
+//     }
 // }
 
 
@@ -294,12 +284,11 @@
 //Chapter # 31-34 Task # 1
 
 // var currentDateAndTime = new Date();
-// alert(currentDateAndTime);
+// document.write(currentDateAndTime);
 
 // Chapter # 31-34 Task # 2
 
-// var months = [ "January", "February", "March", "April", "May", "June", 
-//            "July", "August", "September", "October", "November", "December" ];
+// var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 // var today = new Date();
 // var theMonth = today.getMonth();
 // var nameOfMonth = months[theMonth].toString();
@@ -348,10 +337,12 @@
 // var msToday = today.getTime();
 // var msBackDate = backdate.getTime();
 // var msDiff =  msToday - msBackDate;
-// var minutesElapsed = Math.floor(msDiff/ (1000 * 60))
+// var minutesElapsed = msDiff/ (1000 * 60);
 // document.write("Current Date: "+today);
 // document.write("<br>Elapsed milliseconds since January 1, 1970: "+msDiff);
 // document.write("<br>Elapsed Minutes since January 1, 1970: "+minutesElapsed);
+
+
 
 // Chapter # 31-34 Task # 7
 
@@ -375,7 +366,7 @@
 // laterDate.setHours(00);
 // laterDate.setMinutes(00);
 // laterDate.setSeconds(00);
-// alert("Later Date:" + laterDate);
+// document.write("Later Date:" + laterDate);
 
 
 // Chapter # 31-34 Task # 9
@@ -385,9 +376,9 @@
 // var msToday = today.getTime();
 // var msIstRamadanDay = istRamadanDay.getTime();
 // var msDiff =  msToday - msIstRamadanDay;
-// var dayDiff = msDiff / (1000 * 60 * 60 * 24)
+// var dayDiff = msDiff / (1000 * 60 * 60 * 24);
 // dayDiff = Math.floor(dayDiff);
-// document.write(dayDiff + " days have passed since Ist Ramadan, 2015");
+// alert(dayDiff + " days have passed since Ist Ramadan, 2015");
 
 // Chapter # 31-34 Task # 10
 
@@ -425,9 +416,17 @@
 // Chapter # 31-34 Task # 12
 
 // var currentDate = new Date();
-// document.write("Current date: " + currentDate);
+// alert("Current date: " + currentDate);
+
+// // OR 
+// //document.write("Current date: " + currentDate);
+
 // currentDate.setFullYear(currentDate.getFullYear() -100);
-// document.write("<br>100 years back, it was " + currentDate);
+
+// // OR 
+// //document.write("<br>100 years back, it was " + currentDate);
+
+// alert("100 years back, it was " + currentDate);
 
 
 // Chapter # 31-34 Task # 13
@@ -703,31 +702,6 @@
 
 // document.write("The circumference is " + circumference);
 // document.write("<br>The area is " + area);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
